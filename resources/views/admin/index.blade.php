@@ -14,7 +14,8 @@
                 <th scope="col">name</th>
                 <th scope="col">email</th>
                 <th scope="col">role</th>
-                <th scope="col">action</th>
+                <th scope="col">add</th>
+                <th scope="col">delete</th>
             </tr>
             </thead>
             <tbody>
@@ -30,7 +31,7 @@
                         <a class="btn btn-success" href="{{route('users.create')}}">create other user</a>
                     </td>
                     <td>
-                        <a class="btn btn-danger" href="{{url(' users/'.$user->id)}}">create other user</a>
+                        <a class="btn btn-danger" href="{{route('users.destroy',$user->id)}}">delete user</a>
                     </td>
                 </tr>
             @endforeach
