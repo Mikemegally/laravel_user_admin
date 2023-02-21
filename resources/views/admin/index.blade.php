@@ -31,7 +31,13 @@
                         <a class="btn btn-success" href="{{route('users.create')}}">create other user</a>
                     </td>
                     <td>
-                        <a class="btn btn-danger" href="{{route('users.destroy',$user->id)}}">delete user</a>
+                        <form action="{{route('users.destroy',$user->id)}}" method="post">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-danger">
+                                delete user
+                            </button>
+                        </form>
                     </td>
                 </tr>
             @endforeach
