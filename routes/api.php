@@ -23,4 +23,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::apiResource('users/product', UserProductController::class);
 
-//localhost:800/api/users/product
+//localhost:8000/api/users/product

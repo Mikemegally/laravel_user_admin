@@ -29,6 +29,9 @@
                     <td>
                         <a class="btn btn-success" href="{{route('users.create')}}">create other user</a>
                     </td>
+                    <td>
+                        <a class="btn btn-danger" href="{{url(' users/'.$user->id)}}">create other user</a>
+                    </td>
                 </tr>
             @endforeach
             </tbody>
